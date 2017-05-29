@@ -1,0 +1,8 @@
+function pdf_function($attr, $url) {
+   extract(shortcode_atts(array(
+       'width' => '640',
+       'height' => '480'
+   ), $attr));
+   return '';
+}
+add_shortcode('pdf', 'pdf_function');
