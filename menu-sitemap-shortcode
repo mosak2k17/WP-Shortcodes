@@ -1,0 +1,15 @@
+function menu_function($atts, $content = null) {
+   extract(
+      shortcode_atts(
+         array( 'name' => null, ),
+         $atts
+      )
+   );
+   return wp_nav_menu(
+      array(
+          'menu' => $name,
+          'echo' => false
+          )
+   );
+}
+add_shortcode('menu', 'menu_function');
